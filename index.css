@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f4f4f9, #e0e0e0);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 3s ease;
+    padding: 20px; /* Padding for mobile spacing */
+}
+
+h1 {
+    font-size: 2.5rem; /* Smaller heading size for mobile */
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    animation: slideDown 2s ease-out;
+}
+
+p {
+    font-size: 1.2rem; /* Smaller paragraph size for mobile */
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in 1s;
+}
+
+.gif {
+    width: 80%; /* Responsive gif size */
+    max-width: 250px; /* Max width for larger screens */
+    animation: bounce 2s infinite;
+}
+
+/* Music Player Box */
+.music-player {
+    margin-top: 20px; /* Add margin for spacing below the image */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align the buttons */
+}
+
+.audio-controls {
+    display: flex; /* Flexbox to arrange buttons and slider horizontally */
+    align-items: center; /* Center align items vertically */
+    gap: 10px; /* Space between controls */
+}
+
+/* Center the button and ensure it has animation */
+button {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 12px 24px; /* Increased button padding */
+    font-size: 1rem; /* Responsive font size */
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px 0; /* Space between buttons */
+    display: block; /* Center the button */
+    margin-left: auto; /* Centering adjustments */
+    margin-right: auto; /* Centering adjustments */
+    animation: buttonPulse 1.5s infinite alternate; /* Add animation */
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); /* Slightly larger size */
+    }
+}
+
+button:hover {
+    background-color: #ff4747;
+    transform: scale(1.1); /* Scale on hover */
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller heading size for mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph size for mobile */
+    }
+
+    .gif {
+        width: 90%; /* Wider gif size for smaller screens */
+        max-width: 200px; /* Max width for larger screens */
+    }
+
+    button {
+        font-size: 1rem; /* Adjust button font size for mobile */
+    }
+}
+.bottom-image {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 300px; /* Maximum width */
+    margin-top: 20px; /* Space above the image */
+    border-radius: 8px; /* Rounded corners */
+}
